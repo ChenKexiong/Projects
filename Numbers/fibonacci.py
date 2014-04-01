@@ -1,15 +1,22 @@
-# -*- coding: cp1252 -*-
-# Fibonacci Sequence - Enter a number and have the
-# program generate the Fibonacci sequence to that number
-# or to the Nth number
-
-n = int(raw_input('How many numbers do you need? '))
-series = [1]
-
-while len(series) < n:
-    if len(series) == 1:
-        series.append(1)
+# Fibonacci Sequence
+# 2 methods
+def fib(n):
+    if n == 0 or n == 1:
+        return n
     else:
-        series.append(series[-1] + series[-2])
+        return fib(n-1) + fib(n-2)
 
-print series
+def fib2(n):
+    fibs = [0]
+    while(len(fibs) < n):
+        if len(fibs) == 1:
+            fibs.append(1)
+        else:
+            fibs.append(fibs[-1] + fibs[-2])
+    return fibs
+
+
+if __name__ == '__main__':
+    nn = raw_input('Input a number to cal its fib:')
+    #print fib(int(nn))
+    print fib2(int(nn))

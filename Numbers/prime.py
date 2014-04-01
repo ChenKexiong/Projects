@@ -1,23 +1,19 @@
-# Prime Factorization - Have the user enter a number
-# and find all Prime Factors (if there are any) and
-# display them.
-
-
-def is_a_prime(x):
-    for i in range(2, x):
+# Prime Factorization 
+#iterate,while,algorithm
+def is_prime(x):
+    for i in range(2,int(x ** .5)+1):
         if x % i == 0:
             return False
     return True
 
-# standard boilerplate
-if __name__ == '__main__':
-    n = int(raw_input('Enter the number to find prime factors of: '))
+def pfact(x):
+    pfs = []
+    for i in xrange(2,x+1):
+        while(x % i == 0):
+           if (is_prime(i)):
+               pfs.append(i)
+               x = x/i
+    return pfs
 
-    factors = []
-
-    for i in range(2, n + 1):
-        while n % i == 0: # Thanks @madsulrik
-            if is_a_prime(i):
-                factors.append(i)
-                n /= i
-    print factors
+nn = int(raw_input('Input the number to factorize:'))
+print pfact(nn)
