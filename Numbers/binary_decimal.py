@@ -1,50 +1,34 @@
-"""
-Binary to Decimal and Back Converter
-Develop a converter to convert a decimal number to binary
-or a binary number to its decimal equivalent.
-"""
+# binary to decimal, decimal to binary
+def b2d(b):
+    bb = str(b)
+    bb = bb[::-1]
+    count,order = 0,0
+    for i in bb:
+        count += int(i) * (2 ** order)
+        order += 1
+    return count
 
-def binary_to_decimal(binary):
-    """
-    Converts a binary number into a decimal number.
-    """
-    decimal = 0
-    index = 0
-    while binary > 0:
-        last = binary % 10
-        binary = binary / 10
-        decimal += (last * (2 ** index))
-        index += 1
-    return decimal
-
-def decimal_to_binary(decimal):
-    """
-    Converts a decimal number into a binary number.
-    """
-    binary = ""
-    remainders = []
-    while decimal > 0:
-        remainders.append(str(decimal % 2))
-        decimal /= 2
-    remainders.reverse()
-    binary = "".join(remainders)
-    return 0 if binary == "" else binary
+def d2b(d):
+    ls = []
+    while d != 0:
+        ls.append(str(d % 2))
+        d /= 2
+    ls.reverse()
+    b = "".join(ls)
+    return int(b)
 
 if __name__ == '__main__':
     print """
-    1. Binary to Decimal
-    2. Decimal to Binary\n
+    1. binary to decimal
+    2. decimal to binary\n
     """
-
-    choice = input("Make a choice: ")
-
+    choice = int(raw_input("choose 1 or 2:"))
     if choice == 1:
-        binary = input("Binary to convert: ")
-        print "The binary number %d in decimal is %d" % \
-              (binary, binary_to_decimal(binary))
+        binary = input("input a binary:")
+        print "binary to decimal of %d is %d" % (binary,b2d(binary))
     elif choice == 2:
-        decimal = input("Decimal to convert: ")
-        print "The decimal number %d in binary is %s" % \
-              (decimal, decimal_to_binary(decimal))
+        decimal = input("input a decimal:")
+        print "decimal to binary of %d is %d" % (decimal,d2b(decimal))
     else:
         print "Invalid choice"
+
