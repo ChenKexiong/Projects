@@ -24,11 +24,11 @@ Numbers
 
 **[Change Return Program](Numbers/change.py)** - The user enters a cost and then the amount of money given. The program will figure out the change and the number of quarters, dimes, nickels, pennies needed for the change.
 
-**Binary to Decimal and Back Converter** - Develop a converter to convert a decimal number to binary or a binary number to its decimal equivalent.
+**[Binary to Decimal and Back Converter](Numbers/binary_decimal.py)** - Develop a converter to convert a decimal number to binary or a binary number to its decimal equivalent.
 
 **Calculator** - A simple calculator to do basic operators. Make it a scientific calculator for added complexity.
 
-**Unit Converter (temp, currency, volume, mass and more)** - Converts various units between one another. The user enters the type of unit being entered, the type of unit they want to convert to and then the value. The program will then make the conversion.
+**[Unit Converter (temp, currency, volume, mass and more)](Numbers/unit.py)** - Converts various units between one another. The user enters the type of unit being entered, the type of unit they want to convert to and then the value. The program will then make the conversion.
 
 **Alarm Clock** - A simple clock where it plays a sound after X number of minutes/seconds or at a particular time.
 
