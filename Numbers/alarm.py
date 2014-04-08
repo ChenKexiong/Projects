@@ -8,8 +8,8 @@ pyglet
 """
 
 import time
-import winsound
 import pyglet
+import winsound
 
 def play(hh, mm):
     not_alarmed = 1
