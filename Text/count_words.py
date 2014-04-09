@@ -1,26 +1,16 @@
-"""
-Count Words in a String - Counts the number of individual
-words in a string and display the top 5/10 most used words.
-"""
-
-from collections import defaultdict
+# count words in a string
+from collections import defaultdict as dt
 import operator
 
+def count_words(s):
+    words = s.split()
+    counts = dt(int)
+    for w in words:
+        counts[w] += 1
+    return counts
 if __name__ == '__main__':
-    text = raw_input('Enter some text: \n')
-    words = text.split() # very naive approach, split at space
-
-    counts = defaultdict(int) # no need to check existence of a key
-
-    # find count of each word
-    for word in words:
-        counts[word] += 1
-
-    # sort the dict by the count of each word, returns a tuple (word, count)
-    sorted_counts = sorted(counts.iteritems(), \
-                           key=operator.itemgetter(1), \
-                           reverse=True)
-
-    # print top 5 words
-    for (word,count) in sorted_counts[:5]: # thanks @jrwren for this!
-            print (word, count)
+    s = raw_input('Input a string:\n').lower()
+    counts = count_words(s).items()
+    sorted_counts = sorted(counts,key=operator.itemgetter(1),reverse = True)
+    mycounts = sorted_counts[:5]
+    print mycounts
