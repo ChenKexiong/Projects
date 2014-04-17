@@ -55,7 +55,7 @@ Classic Algorithms
 
 **[Sorting](Classic Algorithms/bubblesort.py)** - Implement two types of sorting algorithms: Merge sort and bubble sort.
 
-**Closest pair problem** - The closest pair of points problem or closest pair problem is a problem of computational geometry: given *n* points in metric space, find a pair of points with the smallest distance between them.
+**[Closest pair problem](Classic Algorithms/closestpair.py)** - The closest pair of points problem or closest pair problem is a problem of computational geometry: given *n* points in metric space, find a pair of points with the smallest distance between them.
 
 **Sieve of Eratosthenes** - The sieve of Eratosthenes is one of the most efficient ways to find all of the smaller primes (below 10 million or so).
 
@@ -120,7 +120,7 @@ Networking
 
 **Mail Checker (POP3 / IMAP)** - The user enters various account information include web server and IP, protocol type (POP3 or IMAP) and the application will check for email at a given interval.
 
-**Country from IP Lookup** - Enter an IP address and find the country that IP is registered in. *Optional: Find the Ip automatically.*
+**[Country from IP Lookup](Networking/country_from_ip.py)** - Enter an IP address and find the country that IP is registered in. *Optional: Find the Ip automatically.*
 
 **Whois Search Tool** - Enter an IP or host address and have it look it up through whois and return the results to you.
 
